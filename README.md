@@ -6,3 +6,4 @@ This repository contains implementations of algorithms that can be useful during
 - Depth First Search (DFS)
 - Breadth First Search (BFS)
 - Sieve of Eratosthenes
+- FIND & UNION

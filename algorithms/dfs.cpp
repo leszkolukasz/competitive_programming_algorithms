@@ -2,13 +2,13 @@
  * This file defines DFS-like algorithms.
  */
 
-#include <iostream>
+#include <cstdin>
 #include <vector>
 
 /*
  * Standard DFS algorithm that traverses through the whole graph described in 'nodes' variable.
  *
- * Attributes
+ * Parameters
  * ----------
  * nodes - graph representation using adjacency list format
  * current - id of the currently visited node

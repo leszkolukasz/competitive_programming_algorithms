@@ -11,6 +11,10 @@
  * id - id number to find leader for
  * leader - array where i-th element holds leader of the i-th 'id'. Can be both vector<int> and int[]
  * 
+ * Returns
+ * -------
+ * leader of the 'id'
+ * 
  * Examples
  * --------
  * int leader[2] = {0, 1};

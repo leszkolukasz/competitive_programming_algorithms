@@ -2,7 +2,7 @@
  * This file defines DFS-like algorithms.
  */
 
-#include <cstdin>
+#include <cstdint>
 #include <vector>
 
 /*

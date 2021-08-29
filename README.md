@@ -5,3 +5,4 @@ This repository contains implementations of algorithms that can be useful during
 ## Available algorithms:
 - Depth First Search (DFS)
 - Breadth First Search (BFS)
+- Sieve of Eratosthenes

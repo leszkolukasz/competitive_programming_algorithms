@@ -12,7 +12,7 @@
  * ----------
  * nodes - graph representation using adjacency list format
  * current - id of the currently visited node
- * visited - array with i-th element being true if i-th node has already been visited and false otherwise
+ * visited - array with i-th element being true if i-th node has already been visited and false otherwise. Can be both vector<bool>, bitset or bool[]
  * 
  * Examples
  * --------
@@ -20,7 +20,8 @@
  * bool visited[3] = {0, 0, 0};
  * dfs(graph, 0, visited);
  */
-void dfs(std::vector<std::vector<int32_t> >& nodes, int32_t current, bool visited[])
+template<class T>
+void dfs(std::vector<std::vector<int32_t> >& nodes, int32_t current, T& visited)
 {
     visited[current] = true;
     for(auto& child: nodes[current])

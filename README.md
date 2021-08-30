@@ -7,3 +7,5 @@ This repository contains implementations of algorithms that can be useful during
 - Breadth First Search (BFS)
 - Sieve of Eratosthenes
 - FIND & UNION
+- Primality check
+- Fast exponentiation

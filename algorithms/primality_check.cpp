@@ -71,6 +71,10 @@ uint64_t fast_exponentiation(uint64_t base, uint64_t exponent, uint64_t mod=UINT
  * Example
  * -------
  * is_prime_fast(101)
+ * 
+ * Warning
+ * -------
+ * You have to watch out if at any point there is no multiplication that results in number bigger than 2^64. If so, then you need to use 128 bit integer type
  */
 bool is_prime_fast(uint64_t number, uint32_t number_of_iterations=5)
 {

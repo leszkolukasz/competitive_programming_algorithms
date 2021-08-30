@@ -1,6 +1,4 @@
-/*
- * This file defines DFS-like algorithms.
- */
+/*This file defines DFS-like algorithms.*/
 
 #include <cstdint>
 #include <vector>
@@ -12,7 +10,8 @@
  * ----------
  * nodes - graph representation using adjacency list format
  * current - id of the currently visited node
- * visited - array with i-th element being true if i-th node has already been visited and false otherwise. Can be both vector<bool>, bitset or bool[]
+ * visited - array with i-th element being true if i-th node has already 
+ * been visited and false otherwise. Can be both vector<bool>, bitset or bool[]
  * 
  * Examples
  * --------

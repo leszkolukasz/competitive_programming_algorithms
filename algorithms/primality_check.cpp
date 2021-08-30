@@ -5,7 +5,8 @@
 #include <iostream>
 
 /*
- * This is slower version of primality checking algorithm. It will always correctly define primality of 'number'.
+ * This is slower version of primality checking algorithm. It will always 
+ * correctly define primality of 'number'.
  *
  * Complexity
  * ----------
@@ -53,7 +54,9 @@ uint64_t fast_exponentiation(uint64_t base, uint64_t exponent, uint64_t mod=UINT
 }
 
 /*
- * This is faster version of primality checking algorithm. Rarely, it will incorrectly define primality of 'number'. Increasing 'number_of_iterations' should decrease probability of it happening.
+ * This is faster version of primality checking algorithm. Rarely, it will 
+ * incorrectly define primality of 'number'. Increasing 'number_of_iterations'
+ * should decrease probability of it happening.
  * 
  * Complexity
  * ----------
@@ -74,7 +77,8 @@ uint64_t fast_exponentiation(uint64_t base, uint64_t exponent, uint64_t mod=UINT
  * 
  * Warning
  * -------
- * You have to watch out if at any point there is no multiplication that results in number bigger than 2^64. If so, then you need to use 128 bit integer type
+ * You have to watch out if at any point there is no multiplication that 
+ * results in number bigger than 2^64. If so, then you need to use 128 bit integer type
  */
 bool is_prime_fast(uint64_t number, uint32_t number_of_iterations=5)
 {

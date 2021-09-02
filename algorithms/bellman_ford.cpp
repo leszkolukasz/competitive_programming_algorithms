@@ -1,6 +1,5 @@
 #include <algorithm>
 #include <cstdint>
-#include <iostream>
 #include <vector>
 
 const int64_t L_INF = 1000'000'000'000'000'005LL;

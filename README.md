@@ -10,3 +10,4 @@ This repository contains implementations of algorithms that can be useful during
 - Primality check
 - Fast exponentiation
 - Trie
+- Floyd-Warshall

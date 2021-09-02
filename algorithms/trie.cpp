@@ -7,8 +7,8 @@
  * Variables
  * ---------
  * jump - pointer to the next leaf in trie
- * count_endings - count number of words ending in current leaf
- * count_passing - count number of words having at least one letter in current leaf
+ * count_endings - count number of words ending in the current leaf
+ * count_passing - count number of words having at least one letter in the current leaf
  * 
  * Examples
  * --------

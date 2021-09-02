@@ -1,12 +1,12 @@
 #include <cstdint>
-#include <iostream>
+#include <string>
 
 /*
  * Implementation of trie algorithm
  *
  * Variables
  * ---------
- * jump - pointer to next leaf in trie
+ * jump - pointer to the next leaf in trie
  * count_endings - count number of words ending in current leaf
  * count_passing - count number of words having at least one letter in current leaf
  * 

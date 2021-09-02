@@ -9,3 +9,4 @@ This repository contains implementations of algorithms that can be useful during
 - FIND & UNION
 - Primality check
 - Fast exponentiation
+- Trie

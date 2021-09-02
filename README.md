@@ -11,3 +11,4 @@ This repository contains implementations of algorithms that can be useful during
 - Fast exponentiation
 - Trie
 - Floyd-Warshall
+- Bellamn-Ford

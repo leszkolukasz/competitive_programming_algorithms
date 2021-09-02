@@ -2,7 +2,6 @@
 
 #include <cstdint>
 #include <random>
-#include <iostream>
 
 /*
  * This is slower version of primality checking algorithm. It will always 
@@ -124,14 +123,4 @@ bool is_prime_fast(uint64_t number, uint32_t number_of_iterations=5)
     }
 
     return true;
-}
-
-
-
-int main()
-{
-    srand(time(nullptr));
-    for(int i = 0; i < 100000000; i++)
-        if(is_prime_slow(i) != is_prime_fast(i))
-            std::cout << i << ": " << is_prime_slow(i) << ' ' << is_prime_fast(i) << '\n';
 }

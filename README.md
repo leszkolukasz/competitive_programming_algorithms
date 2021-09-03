@@ -12,3 +12,4 @@ This repository contains implementations of algorithms that can be useful during
 - Trie
 - Floyd-Warshall
 - Bellamn-Ford
+- Dijkstra

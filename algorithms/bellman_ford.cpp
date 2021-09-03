@@ -1,4 +1,5 @@
 /* This file defines Bellman-Ford algorithm. */
+
 #include <algorithm>
 #include <cstdint>
 #include <vector>

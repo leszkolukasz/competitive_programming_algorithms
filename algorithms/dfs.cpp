@@ -1,4 +1,4 @@
-/*This file defines DFS-like algorithms.*/
+/* This file defines DFS-like algorithms. */
 
 #include <cstdint>
 #include <vector>

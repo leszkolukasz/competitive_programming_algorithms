@@ -1,6 +1,4 @@
-/*
- * This file defines sieve of eratosthenes
- */
+/* This file defines sieve of Eratosthenes. */
 
 #include <cstdint>
 #include <vector>

@@ -1,4 +1,4 @@
-/*This module defines primality checking algorithms*/
+/* This module defines primality checking algorithms. */
 
 #include <cstdint>
 #include <random>

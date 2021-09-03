@@ -1,3 +1,4 @@
+/* This file defines trie data structure. */
 #include <cstdint>
 #include <string>
 
@@ -23,22 +24,22 @@ class Trie
 {
 public:
     Trie* jump[26];
-    uint32_t count_endings;
-    uint32_t count_passing;
+    int32_t count_endings;
+    int32_t count_passing;
 
     Trie()
         :count_endings(0), count_passing(0)
     {
-        for(uint32_t i = 0; i < 26; i++)
+        for(int32_t i = 0; i < 26; i++)
             jump[i] = nullptr;
     }
 
-    uint32_t get_id(const std::string& word, uint32_t index)
+    int32_t get_id(const std::string& word, int32_t index)
     {
-        return static_cast<uint32_t>(word[index]-'a');
+        return static_cast<int32_t>(word[index]-'a');
     }
 
-    void add(const std::string& word, uint32_t index=0)
+    void add(const std::string& word, int32_t index=0)
     {
         if(index == word.length())
         {
@@ -46,7 +47,7 @@ public:
             return;
         }
 
-        uint32_t id = get_id(word, index);
+        int32_t id = get_id(word, index);
         if(!jump[id])
             jump[id] = new Trie();
 
@@ -54,7 +55,7 @@ public:
         jump[id]->add(word, index+1);
     }
 
-    void remove(const std::string& word, uint32_t index=0)
+    void remove(const std::string& word, int32_t index=0)
     {
         if(index == word.length())
         {
@@ -62,7 +63,7 @@ public:
             return;
         }
 
-        uint32_t id = get_id(word, index);
+        int32_t id = get_id(word, index);
         if(!jump[id])
             return;
 
@@ -73,12 +74,12 @@ public:
             delete jump[id];
     }
 
-    bool find(const std::string& word, uint32_t index=0)
+    bool find(const std::string& word, int32_t index=0)
     {
         if(index == word.length())
             return (count_endings > 0);
 
-        uint32_t id = get_id(word, index);
+        int32_t id = get_id(word, index);
         if(!jump[id])
             return false;
 
@@ -87,7 +88,7 @@ public:
 
     void traverse()
     {
-        for(uint32_t i = 0; i < 26; i++)
+        for(int32_t i = 0; i < 26; i++)
             if(jump[i])
                 jump[i]->traverse();
     }

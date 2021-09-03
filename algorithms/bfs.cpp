@@ -1,4 +1,4 @@
-/*This file defines BFS algorithm*/
+/* This file defines BFS algorithm. */
 
 #include <cstdint>
 #include <queue>

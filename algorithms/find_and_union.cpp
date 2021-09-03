@@ -1,4 +1,4 @@
-/* This file defines FIND & UNION algorithm */
+/* This file defines FIND & UNION algorithm. */
 
 #include <cstdint>
 #include <vector>

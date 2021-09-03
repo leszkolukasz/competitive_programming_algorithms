@@ -1,4 +1,4 @@
-/*This file defines fast exponentiation algorithm with modulo support*/
+/* This file defines fast exponentiation algorithm with modulo support. */
 
 #include <cstdint>
 

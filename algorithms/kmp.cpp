@@ -11,6 +11,9 @@
  * ----------
  * word - word to calculate KMP for
  * 
+ * Returns
+ * vector with calulated KMP for every prefix
+ * 
  * Examples
  * --------
  * auto x = kmp("aaaabaa");

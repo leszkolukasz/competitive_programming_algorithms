@@ -15,7 +15,7 @@
  * hash - hash calculated for every prefix
  * power - subsequent powers of prime
  * 
- * Examaples
+ * Examples
  * ---------
  * Hash hello("hello");
  * Hash ll("ll");
@@ -42,7 +42,7 @@ public:
         for(int32_t i = 1; i <= lenght; i++)
             power[i] = (power[i - 1] * 1LL * prime) % modulo;
 
-        for(int i = 1; i <= lenght; i++)
+        for(int32_t i = 1; i <= lenght; i++)
             hash[i] = (hash[i - 1] * 1LL * prime + word[i - 1]) % modulo;
     }
 

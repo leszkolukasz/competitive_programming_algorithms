@@ -24,9 +24,8 @@
  * std::cout << hello.getHash(2, 3) << '\n';
  * std::cout << ll.getHash() << '\n';
  */
-class Hash
+struct Hash
 {
-public:
     std::string word;
     int32_t modulo;
     int32_t prime;
@@ -47,11 +46,12 @@ public:
             hash[i] = (hash[i - 1] * 1LL * prime + word[i - 1]) % modulo;
     }
 
-    //0 indexed
     int getHash(int32_t l = 0, int32_t r = -1)
     {
         if(r == -1)
             r = word.length()-1;
+
+        //0 indexed
         return ((hash[r + 1] - hash[l] * 1LL * power[r - l + 1]) % modulo + modulo) % modulo;
     }
 };

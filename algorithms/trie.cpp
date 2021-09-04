@@ -20,9 +20,8 @@
  * std::cout << trie.find("hello");
  */
 
-class Trie
+struct Trie
 {
-public:
     Trie* jump[26];
     int32_t count_endings;
     int32_t count_passing;

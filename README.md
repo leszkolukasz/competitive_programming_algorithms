@@ -20,6 +20,7 @@ This repository contains implementations of algorithms that can be useful during
 - Hashing
 - KMP
 - Trie
+- Manacher
 
 ### Other
 - FIND & UNION

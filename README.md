@@ -7,7 +7,7 @@ This repository contains implementations of algorithms that can be useful during
 ### Graph:
 - Depth First Search (DFS)
 - Breadth First Search (BFS)
-- Bellmn-Ford
+- Bellman-Ford
 - Floyd-Warshall
 - Dijkstra
 

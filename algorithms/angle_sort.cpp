@@ -45,6 +45,7 @@ int32_t sign(int64_t a)
  * Parameters
  * ----------
  * points - array of points. Can be both Point[] and vector<Point>
+ * number_of_points - number of points in array
  * 
  * Examples
  * --------
@@ -57,14 +58,14 @@ void angle_sort(T& points, int32_t number_of_points)
     if(number_of_points == 1)  
         return;
 
-    //root point is the one most to the left. If there are a few of the same x coordinate then
-    //the one with the smallest y coordinate is root.
+    //root point is the one most to the bottom. If there are a few of the same y coordinate then
+    //the one with the smallest x coordinate is root.
     Point root = points[0];
     int32_t root_id = 0;
 
     for(int32_t i = 1; i < number_of_points; i++)
     {
-        if(points[i].x < root.x || (points[i].x == root.x && points[i].y < root.y))
+        if(points[i].y < root.y || (points[i].y == root.y && points[i].x < root.x))
         {
             root = points[i];
             root_id = i;

@@ -12,6 +12,16 @@ struct Point
     Point(int32_t x, int32_t y)
         :x(x), y(y)
     {}
+
+    bool cmp(const Point& a, const Point& b)
+    {
+        if(a.x < b.x)
+            return true;
+        else if(a.x > b.x)
+            return false;
+        else
+            return a.y < b.y;
+    }
 };
 
 struct Segment

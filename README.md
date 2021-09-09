@@ -24,6 +24,8 @@ This repository contains implementations of algorithms that can be useful during
 
 ### Geometry
 - Segment intersection
+- Angle sort
+- Convex hull
 
 ### Other
 - FIND & UNION

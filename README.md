@@ -11,6 +11,7 @@ This repository contains implementations of algorithms that can be useful during
 - Floyd-Warshall
 - Dijkstra
 - Point-Point Segment Tree
+- Point-Range Segment Tree
 
 ### Mathematical
 - Sieve of Eratosthenes

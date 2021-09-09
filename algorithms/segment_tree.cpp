@@ -109,13 +109,105 @@ struct PointPointSegmentTree
     }
 };
 
+/*
+ * Point-Range segment tree implementation
+ *
+ * Default implementation adds value to a range, and queries sum at a given point.
+ * 
+ * Examples
+ * --------
+ * PointRangeSegmentTree tree(100, 0);
+ * tree.insert(0, 50, 59);
+ * tree.insert(50, 50, 100);
+ * std::cout << tree.query(49) << "\n";
+ * std::cout << tree.query(50) << "\n";
+ * std::cout << tree.query(51) << "\n";
+*/
+struct PointRangeSegmentTree
+{
+    std::vector<int32_t> nodes;
+    int32_t number_of_nodes;
+    int32_t shift;
+
+    PointRangeSegmentTree(int32_t number_of_nodes=0, int32_t default_value=0)
+        : number_of_nodes(number_of_nodes)
+    {
+        shift = highest_bit(number_of_nodes);
+        nodes.resize(1LL << (shift+1));
+        shift = 1 << shift;
+        fill(nodes.begin(), nodes.end(), default_value);
+    }
+
+    /* Build nodes from predefined values.
+     *
+     * Parameters
+     * ----------
+     * array - array to build from. Can both vector<int> and int[].
+     * array_size - size of 'array'
+     * 
+     * Examples
+     * --------
+     * For more examples see PointPointSegment tree docs
+     */
+    template<class T>
+    void build_from_array(T& array, int32_t array_size)
+    {
+        shift = highest_bit(number_of_nodes);
+        nodes.resize(1LL << (shift+1));
+        shift = 1 << shift;
+
+        for(int32_t i = 0; i < array_size; i++)
+            nodes[i+shift] = array[i];
+    }
+
+    void insert(int32_t lf, int32_t rt, int32_t value)
+    {
+        lf += shift;
+        rt += shift;
+
+        nodes[lf] += value;
+        if(lf != rt)
+            nodes[rt] += value;
+
+        while(lf/2 != rt/2)
+        {
+            if(lf%2 == 0)
+                nodes[lf+1] += value;
+            if(rt&1)
+                nodes[rt-1] += value;
+
+            lf >>= 1, rt >>= 1;
+        }
+    }
+
+    int32_t query(int32_t position)
+    {
+        position += shift;
+        int32_t result = 0;
+
+        while(position)
+        {
+            result += nodes[position];
+            position >>= 1;
+        }
+
+        return result;
+    }
+};
+
 int main()
 {
     using namespace std;
-    PointPointSegmentTree tree;
-    vector<int> nodes{1, 5, 8, 15};
+    PointRangeSegmentTree tree(100, 0);
+    /*vector<int> nodes{1, 5, 8, 15};
     tree.build_from_array(nodes, nodes.size());
     cout << tree.query(0, 0) << "\n";
     cout << tree.query(0, 1) << "\n";
     cout << tree.query(1, 3) << "\n";
+*/
+    tree.insert(0, 50, 59);
+    tree.insert(50, 50, 100);
+    cout << tree.query(49) << "\n";
+    cout << tree.query(50) << "\n";
+    cout << tree.query(51) << "\n";
 }

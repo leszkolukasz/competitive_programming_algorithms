@@ -10,6 +10,7 @@ This repository contains implementations of algorithms that can be useful during
 - Bellman-Ford
 - Floyd-Warshall
 - Dijkstra
+- Point-Point Segment Tree
 
 ### Mathematical
 - Sieve of Eratosthenes
@@ -28,4 +29,4 @@ This repository contains implementations of algorithms that can be useful during
 - Convex hull
 
 ### Other
-- FIND & UNION
+- Find & Union

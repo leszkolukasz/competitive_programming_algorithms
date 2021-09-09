@@ -39,7 +39,6 @@ std::vector<int32_t> manacher(const std::string& word)
     {
         if (k <= rt)
             radius = std::min(palindrome_radius[2 * center - k], rt - k);
-
         else
             radius = 0;
 
@@ -61,11 +60,9 @@ std::vector<int32_t> manacher(const std::string& word)
     {
         if(extended_word[i] == '#')
             palindrome_radius[i] = ((palindrome_radius[i]+1)/2)*2;
-
         else
             palindrome_radius[i] = ((palindrome_radius[i])/2)*2 + 1;
     }
-
 
     return palindrome_radius;
 }

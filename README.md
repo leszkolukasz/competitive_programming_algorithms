@@ -13,6 +13,7 @@ This repository contains implementations of algorithms that can be useful during
 - Lowest Common Ancestor (LCA)
 - Point-Point Segment Tree
 - Point-Range Segment Tree
+- Range-Range Segment Tree
 
 ### Mathematical
 - Sieve of Eratosthenes

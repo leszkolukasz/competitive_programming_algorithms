@@ -10,6 +10,7 @@ This repository contains implementations of algorithms that can be useful during
 - Bellman-Ford
 - Floyd-Warshall
 - Dijkstra
+- Lowest Common Ancestor (LCA)
 - Point-Point Segment Tree
 - Point-Range Segment Tree
 

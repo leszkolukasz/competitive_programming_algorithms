@@ -48,6 +48,8 @@ struct PointPointSegmentTree
 
         for(int32_t i = shift; i < nodes.size(); i++)
             nodes[i] = default_value;
+        for(int32_t i = shift-1; i >= 1; i--)
+            nodes[i] = nodes[2*i] + nodes[2*i+1];
     }
 
     /* Build nodes from predefined values.
@@ -149,6 +151,8 @@ struct PointRangeSegmentTree
         
         for(int32_t i = shift; i < nodes.size(); i++)
             nodes[i] = default_value;
+        for(int32_t i = shift-1; i >= 1; i--)
+            nodes[i] = nodes[2*i] + nodes[2*i+1];
     }
 
     /* Build nodes from predefined values.

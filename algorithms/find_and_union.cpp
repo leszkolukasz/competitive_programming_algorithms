@@ -55,8 +55,8 @@ void UNION(int32_t id_a, int32_t id_b, T& leader, D& group_size)
     if(group_size[id_a] < group_size[id_b])
     {
         auto copy = id_a;
-        id_b = id_a;
         id_a = id_b;
+        id_b = copy;
     }
 
     leader[id_b] = id_a;

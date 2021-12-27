@@ -32,7 +32,7 @@ struct Hash
     std::vector <int32_t> hash;
     std::vector <int32_t> power;
 
-    Hash(std::string& word, int32_t modulo = 1e9+7, int32_t prime = 257)
+    Hash(const std::string& word, int32_t modulo = 1e9+7, int32_t prime = 257)
         :word(word), modulo(modulo), prime(prime)
     {
         int32_t lenght = word.length();

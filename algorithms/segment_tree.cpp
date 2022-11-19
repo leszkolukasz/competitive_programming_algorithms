@@ -17,7 +17,7 @@ int64_t highest_bit(int64_t x)
 }
 
 /*
- * Point-Point segment tree implementation
+ * Range-Point segment tree implementation
  *
  * Default implementation adds value to a single position, and queries sum
  * over the range.
@@ -28,18 +28,18 @@ int64_t highest_bit(int64_t x)
  * 
  * Examples
  * --------
- * PointPointSegmentTree tree(100, 0);
+ * RangePointSegmentTree tree(100, 0);
  * tree.insert(0, 10);
  * tree.insert(1, 5);
  * std::cout << tree.query(0, 99) << '\n';
  */
-struct PointPointSegmentTree
+struct RangePointSegmentTree
 {
     std::vector<int32_t> nodes;
     int32_t number_of_nodes;
     int32_t shift;
 
-    PointPointSegmentTree(int32_t number_of_nodes=0, int32_t default_value=0)
+    RangePointSegmentTree(int32_t number_of_nodes=0, int32_t default_value=0)
         : number_of_nodes(number_of_nodes)
     {
         shift = highest_bit(number_of_nodes);
@@ -61,7 +61,7 @@ struct PointPointSegmentTree
      * 
      * Examples
      * -------
-     * PointPointSegmentTree tree;
+     * RangePointSegmentTree tree;
      * vector<int> nodes{1, 5, 8, 15};
      * tree.build_from_array(nodes, nodes.size());
      * std::cout << tree.query(0, 0) << "\n";
